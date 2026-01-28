@@ -9,7 +9,7 @@ spec:
       "cniVersion": "0.3.1",
       "name": "ctlplane",
       "type": "ipvlan",
-      "master": "enp3s0",
+      "master": "ens35",
       "mode": "l2",
       "ipam": {
         "type": "whereabouts",
@@ -30,12 +30,12 @@ spec:
       "cniVersion": "0.3.1",
       "name": "internalapi",
       "type": "ipvlan",
-      "master": "enp4s0",
+      "master": "ens37",
       "mode": "l2",
-      "ipam": { 
-        "type": "whereabouts", 
+      "ipam": {
+        "type": "whereabouts",
         "range": "172.17.0.0/24",
-        "range_start": "172.17.0.30", 
+        "range_start": "172.17.0.30",
         "range_end": "172.17.0.70"
       }
     }
@@ -51,13 +51,13 @@ spec:
       "cniVersion": "0.3.1",
       "name": "storage",
       "type": "ipvlan",
-      "master": "enp5s0",
+      "master": "ens38",
       "mode": "l2",
       "ipam": {
         "type": "whereabouts",
-        "range": "172.18.0.0/24",
-        "range_start": "172.18.0.30",
-        "range_end": "172.18.0.70"
+        "range": "192.168.1.0/24",
+        "range_start": "192.168.1.233",
+        "range_end": "192.168.1.235"
       }
     }
 ---
@@ -72,7 +72,7 @@ spec:
       "cniVersion": "0.3.1",
       "name": "tenant",
       "type": "ipvlan",
-      "master": "enp6s0",
+      "master": "ens39",
       "mode": "l2",
       "ipam": {
         "type": "whereabouts",

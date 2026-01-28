@@ -5,7 +5,7 @@ metadata:
   namespace: openstack
 spec:
   secret: osp-secret
-  storageClass: ocs-external-storagecluster-ceph-rbd
+  storageClass: px-csi-replicated
   dns:
     template:
       override:
@@ -60,7 +60,7 @@ spec:
           customServiceConfigSecrets:
           - cinder-nfs-config
   barbican:
-    enabled: false  
+    enabled: false
     apiOverride:
       route: {}
     template:
@@ -88,7 +88,7 @@ spec:
       databaseInstance: openstack
       storage:
         storageRequest: 10G
-        storageClass: "ocs-external-storagecluster-ceph-rbd"
+        storageClass: "px-csi-replicated"
       keystoneEndpoint: default
       glanceAPIs:
         default:
@@ -248,10 +248,6 @@ spec:
           networkAttachment: internalapi
           storageRequest: 10G
           replicas: 1
-      ovnController:
-        networkAttachment: tenant
-        nicMappings:
-         datacentre: enp7s0
   placement:
     apiOverride:
       route: {}
@@ -434,7 +430,7 @@ spec:
           - designate
       designateBackendbind9:
         replicas: 1
-        storageClass: local-storage
+        storageClass: px-csi-replicated
         storageRequest: 10G
         networkAttachments:
           - designate

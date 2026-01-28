@@ -8,7 +8,7 @@ spec:
   ipAddressPools:
   - ctlplane
   interfaces:
-  - enp3s0
+  - ens35
 ---
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
@@ -19,7 +19,7 @@ spec:
   ipAddressPools:
   - internalapi
   interfaces:
-  - enp4s0
+  - ens37
 ---
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
@@ -30,7 +30,7 @@ spec:
   ipAddressPools:
   - storage
   interfaces:
-  - enp5s0
+  - ens38
 ---
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
@@ -41,4 +41,4 @@ spec:
   ipAddressPools:
   - tenant
   interfaces:
-  - enp6s0
+  - ens39

@@ -1,188 +1,227 @@
 apiVersion: nmstate.io/v1
 kind: NodeNetworkConfigurationPolicy
 metadata:
-  name: osp-multi-nic-worker-ocp4-worker1
+  name: osp-multi-nic-worker-ocp4-acm1
 spec:
   desiredState:
     interfaces:
-    - description: Configuring internalapi enp4s0
+    - description: Configuring internalapi ens37
       ipv4:
         address:
         - ip: 172.17.0.10
-          prefix-length: 24 
+          prefix-length: 24
         enabled: true
         dhcp: false
       ipv6:
         enabled: false
       mtu: 1500
-      name: enp4s0
+      name: ens37
       state: up
       type: ethernet
-    - description: Configuring storage enp5s0
+    - description: Configuring storage ens38
       ipv4:
         address:
-        - ip: 172.18.0.10
-          prefix-length: 24 
+        - ip: 192.168.1.230
+          prefix-length: 24
         enabled: true
         dhcp: false
       ipv6:
         enabled: false
       mtu: 1500
-      name: enp5s0
+      name: ens38
       state: up
       type: ethernet
-    - description: Configuring tenat enp6s0
+    - description: Configuring tenat ens39
       ipv4:
         address:
         - ip: 172.19.0.10
-          prefix-length: 24 
+          prefix-length: 24
         enabled: true
         dhcp: false
       ipv6:
         enabled: false
       mtu: 1500
-      name: enp6s0
+      name: ens39
       state: up
       type: ethernet
-    - description: Configuring ctlplane enp3s0
+    - description: Configuring external ens36
+      ipv4:
+        address:
+        - ip: 172.21.0.10
+          prefix-length: 24
+        enabled: true
+        dhcp: false
+      ipv6:
+        enabled: false
+      mtu: 1500
+      name: ens36
+      state: up
+      type: ethernet
+    - description: Configuring ctlplane ens35
       ipv4:
         address:
         - ip: 172.22.0.10
-          prefix-length: 24 
+          prefix-length: 24
         enabled: true
         dhcp: false
       ipv6:
         enabled: false
       mtu: 1500
-      name: enp3s0
+      name: ens35
       state: up
       type: ethernet
   nodeSelector:
-    kubernetes.io/hostname: control-plane-cluster-UUID-1
+    kubernetes.io/hostname: acm1.ocp4.ocp.lan
     node-role.kubernetes.io/worker: ""
 ---
 apiVersion: nmstate.io/v1
 kind: NodeNetworkConfigurationPolicy
 metadata:
-  name: osp-multi-nic-worker-ocp4-worker2
+  name: osp-multi-nic-worker-ocp4-acm2
 spec:
   desiredState:
     interfaces:
-    - description: Configuring internalapi enp4s0
+    - description: Configuring internalapi ens37
       ipv4:
         address:
         - ip: 172.17.0.11
-          prefix-length: 24 
+          prefix-length: 24
         enabled: true
         dhcp: false
       ipv6:
         enabled: false
       mtu: 1500
-      name: enp4s0
+      name: ens37
       state: up
       type: ethernet
-    - description: Configuring storage enp5s0
+    - description: Configuring storage ens38
       ipv4:
         address:
-        - ip: 172.18.0.11
-          prefix-length: 24 
+        - ip: 192.168.1.231
+          prefix-length: 24
         enabled: true
         dhcp: false
       ipv6:
         enabled: false
       mtu: 1500
-      name: enp5s0
+      name: ens38
       state: up
       type: ethernet
-    - description: Configuring tenat enp6s0
+    - description: Configuring tenat ens39
       ipv4:
         address:
         - ip: 172.19.0.11
-          prefix-length: 24 
+          prefix-length: 24
         enabled: true
         dhcp: false
       ipv6:
         enabled: false
       mtu: 1500
-      name: enp6s0
+      name: ens39
       state: up
       type: ethernet
-    - description: Configuring ctlplane enp3s0
+    - description: Configuring external ens36
+      ipv4:
+        address:
+        - ip: 172.21.0.11
+          prefix-length: 24
+        enabled: true
+        dhcp: false
+      ipv6:
+        enabled: false
+      mtu: 1500
+      name: ens36
+      state: up
+      type: ethernet
+    - description: Configuring ctlplane ens35
       ipv4:
         address:
         - ip: 172.22.0.11
-          prefix-length: 24 
+          prefix-length: 24
         enabled: true
         dhcp: false
       ipv6:
         enabled: false
       mtu: 1500
-      name: enp3s0
+      name: ens35
       state: up
       type: ethernet
   nodeSelector:
-    kubernetes.io/hostname: control-plane-cluster-UUID-2 
+    kubernetes.io/hostname: acm2.ocp4.ocp.lan
     node-role.kubernetes.io/worker: ""
 ---
 apiVersion: nmstate.io/v1
 kind: NodeNetworkConfigurationPolicy
 metadata:
-  name: osp-multi-nic-worker-ocp4-worker3
+  name: osp-multi-nic-worker-ocp4-acm3
 spec:
   desiredState:
     interfaces:
-    - description: Configuring internalapi enp4s0
+    - description: Configuring internalapi ens37
       ipv4:
         address:
         - ip: 172.17.0.12
-          prefix-length: 24 
+          prefix-length: 24
         enabled: true
         dhcp: false
       ipv6:
         enabled: false
       mtu: 1500
-      name: enp4s0
+      name: ens37
       state: up
       type: ethernet
-    - description: Configuring storage enp5s0
+    - description: Configuring storage ens38
       ipv4:
         address:
-        - ip: 172.18.0.12
-          prefix-length: 24 
+        - ip: 192.168.1.232
+          prefix-length: 24
         enabled: true
         dhcp: false
       ipv6:
         enabled: false
       mtu: 1500
-      name: enp5s0
+      name: ens38
       state: up
       type: ethernet
-    - description: Configuring tenat enp6s0
+    - description: Configuring tenat ens39
       ipv4:
         address:
         - ip: 172.19.0.12
-          prefix-length: 24 
+          prefix-length: 24
         enabled: true
         dhcp: false
       ipv6:
         enabled: false
       mtu: 1500
-      name: enp6s0
+      name: ens39
       state: up
       type: ethernet
-    - description: Configuring ctlplane enp3s0
+    - description: Configuring external ens36
+      ipv4:
+        address:
+        - ip: 172.21.0.12
+          prefix-length: 24
+        enabled: true
+        dhcp: false
+      ipv6:
+        enabled: false
+      mtu: 1500
+      name: ens36
+      state: up
+      type: ethernet
+    - description: Configuring ctlplane ens35
       ipv4:
         address:
         - ip: 172.22.0.12
-          prefix-length: 24 
+          prefix-length: 24
         enabled: true
         dhcp: false
       ipv6:
         enabled: false
       mtu: 1500
-      name: enp3s0
+      name: ens35
       state: up
       type: ethernet
   nodeSelector:
-    kubernetes.io/hostname: control-plane-cluster-UUID-3 
+    kubernetes.io/hostname: acm3.ocp4.ocp.lan
     node-role.kubernetes.io/worker: ""
