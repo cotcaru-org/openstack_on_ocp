@@ -1,0 +1,8 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  name: redhat-registry
+  namespace: openstack
+data:
+  edpm_container_registry_logins: eyJyZWdpc3RyeS5yZWRoYXQuaW8iOiB7ImNvdGNhcnVAZ21haWwuY29tIjogIkRvY2tlcjM1NDIhIn19
+type: Opaque
