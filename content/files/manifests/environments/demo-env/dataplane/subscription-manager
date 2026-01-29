@@ -4,5 +4,5 @@ metadata:
   name: subscription-manager
   namespace: openstack
 data:
-  rhc_auth: eyJsb2dpbiI6IHsidXNlcm5hbWUiOiAiY290Y2FydUBnbWFpbC5jb20iLCAicGFzc3dvcmQiOiAiRG9ja2VyMzU0MiEifX0=
+  rhc_auth: eyJsb2dpbiI6IHsidXNlcm5hbWUiOiAibWNvdGNhcnUuY2NzcCIsICJwYXNzd29yZCI6ICJDcm8kJHZhbGUuMjAyNSJ9fQ==
 type: Opaque
