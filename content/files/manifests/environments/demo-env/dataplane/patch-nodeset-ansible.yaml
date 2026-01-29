@@ -1,0 +1,5 @@
+#cat << EOF > environments/demo-env/dataplane/patch-nodeset-ansible.yaml
+- op: replace
+  path: /spec/nodeTemplate/ansible/ansibleVars/dns_search_domains
+  value: openstack.svc.cluster.local
+#EOF

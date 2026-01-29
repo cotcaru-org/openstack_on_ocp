@@ -63,7 +63,7 @@ spec:
         neutron_public_interface_name: eth0
         edpm_network_config_hide_sensitive_logs: false
         edpm_ovn_bridge_mappings: ["datacentre:br-ex"]
-        dns_search_domains: openshift.svc.cluster.local
+        dns_search_domains: openstack.svc.cluster.local
         ctlplane_host_routes: []
         ctlplane_subnet_cidr: 24
         ctlplane_mtu: 1500
