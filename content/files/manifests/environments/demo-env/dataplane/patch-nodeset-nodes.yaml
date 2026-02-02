@@ -2,7 +2,7 @@
   - op: add
     path: /spec/nodes/edpm-compute-1
     value:
-      hostName: edpm-compute-1.openstack.svc.cluster.local
+      hostName: edpm-compute-1
       networks:
       - name: ctlplane
         subnetName: subnet1
@@ -22,7 +22,7 @@
         fixedIP: 172.21.0.100
       ansible:
         ansibleHost: 172.22.0.100
-        ansibleUser: cloud-user
+        ansibleUser: dem
         ansibleVars:
-          fqdn_internal_api: edpm-compute-1.openstack.svc.cluster.local
+          fqdn_internal_api: compute01.ocp4.ocp.lan
 #EOF
