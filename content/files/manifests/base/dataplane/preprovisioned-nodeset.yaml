@@ -60,7 +60,7 @@ spec:
           - {name: "rhceph-7-tools-for-rhel-9-x86_64-rpms", state: enabled}
         edpm_bootstrap_release_version_package: []
         neutron_physical_bridge_name: br-ex
-        neutron_public_interface_name: ens33
+        neutron_public_interface_name: ens35
         edpm_network_config_hide_sensitive_logs: false
         edpm_ovn_bridge_mappings: ["datacentre:br-ex"]
         dns_search_domains: openstack.svc.cluster.local
@@ -92,6 +92,9 @@ spec:
           {%- endfor %}
           {% set min_viable_mtu = mtu_list | max %}
           network_config:
+          - type: interface
+             name: ens33
+             use_dhcp: true
           - type: interface
             name: ens35
             mtu: {{ ctlplane_mtu }}
