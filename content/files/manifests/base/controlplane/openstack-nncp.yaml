@@ -21,7 +21,7 @@ spec:
     - description: Configuring storage ens38
       ipv4:
         address:
-        - ip: 192.168.1.230
+        - ip: 172.18.0.10
           prefix-length: 24
         enabled: true
         dhcp: false
@@ -97,7 +97,7 @@ spec:
     - description: Configuring storage ens38
       ipv4:
         address:
-        - ip: 192.168.1.231
+        - ip: 172.18.0.11
           prefix-length: 24
         enabled: true
         dhcp: false
@@ -173,7 +173,7 @@ spec:
     - description: Configuring storage ens38
       ipv4:
         address:
-        - ip: 192.168.1.232
+        - ip: 172.18.0.12
           prefix-length: 24
         enabled: true
         dhcp: false
