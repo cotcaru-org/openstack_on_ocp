@@ -41,7 +41,7 @@ spec:
             mountPath: "/runner/artifacts"
     managementNetwork: ctlplane
     ansible:
-      ansibleUser: cloud-user
+      ansibleUser: dem
       ansiblePort: 22
       ansibleVarsFrom:
         - secretRef:
@@ -60,7 +60,7 @@ spec:
           - {name: "rhceph-7-tools-for-rhel-9-x86_64-rpms", state: enabled}
         edpm_bootstrap_release_version_package: []
         neutron_physical_bridge_name: br-ex
-        neutron_public_interface_name: eth0
+        neutron_public_interface_name: ens33
         edpm_network_config_hide_sensitive_logs: false
         edpm_ovn_bridge_mappings: ["datacentre:br-ex"]
         dns_search_domains: openstack.svc.cluster.local
