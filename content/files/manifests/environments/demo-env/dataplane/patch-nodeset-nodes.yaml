@@ -21,7 +21,7 @@
         subnetName: subnet1
         fixedIP: 172.21.0.100
       ansible:
-        ansibleHost: 172.0.22.100
+        ansibleHost: 192.168.22.47
         ansibleUser: dem
         ansibleVars:
           fqdn_internal_api: compute01.ocp4.ocp.lan
