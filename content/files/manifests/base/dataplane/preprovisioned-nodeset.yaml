@@ -93,8 +93,8 @@ spec:
           {% set min_viable_mtu = mtu_list | max %}
           network_config:
           - type: interface
-             name: ens33
-             use_dhcp: true
+            name: ens33
+            use_dhcp: true
           - type: interface
             name: ens35
             mtu: {{ ctlplane_mtu }}
