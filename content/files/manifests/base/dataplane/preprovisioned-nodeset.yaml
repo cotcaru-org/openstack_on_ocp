@@ -129,8 +129,8 @@ spec:
             mtu: 1500
             use_dhcp: false
             members:
-              - type: interface
-                name: ens39
-                mtu: 1500
-                primary: true
+            - type: interface
+              name: ens39
+              mtu: 1500
+              primary: true
   nodes: {}
