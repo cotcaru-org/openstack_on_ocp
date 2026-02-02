@@ -1,0 +1,8 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  name: subscription-manager
+  namespace: openstack
+data:
+  rhc_auth: eyJsb2dpbiI6IHsidXNlcm5hbWUiOiAibWNvdGNhcnUuY2NzcCIsICJwYXNzd29yZCI6ICJDcm8kJHZhbGUuMjAyNSJ9fQ==
+type: Opaque

@@ -1,0 +1,8 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  name: cinder-nfs-config
+  namespace: openstack
+data:
+  nfs-cinder-conf: W25mc10KbmFzX2hvc3Q9MTcyLjE4LjAuMTMKbmFzX3NoYXJlX3BhdGg9L05GUy9jaW5kZXIK
+type: Opaque
