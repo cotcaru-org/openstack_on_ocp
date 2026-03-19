@@ -1,8 +1,8 @@
 #cat << EOF > environments/demo-env/dataplane/patch-nodeset-nodes.yaml
   - op: add
-    path: /spec/nodes/edpm-compute-1
+    path: /spec/nodes/compute01
     value:
-      hostName: edpm-compute-1
+      hostName: compute01
       networks:
       - name: ctlplane
         subnetName: subnet1
@@ -24,5 +24,5 @@
         ansibleHost: 192.168.22.47
         ansibleUser: dem
         ansibleVars:
-          fqdn_internal_api: compute01.ocp4.ocp.lan
+          fqdn_internal_api: compute01.ocp.lan
 #EOF
