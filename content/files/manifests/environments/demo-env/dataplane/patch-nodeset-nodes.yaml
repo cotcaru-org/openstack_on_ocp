@@ -25,4 +25,30 @@
         ansibleUser: dem
         ansibleVars:
           fqdn_internal_api: compute01.ocp.lan
+  - op: add
+    path: /spec/nodes/compute02
+    value:
+      hostName: compute02
+      networks:
+      - name: ctlplane
+        subnetName: subnet1
+        defaultRoute: false
+        fixedIP: 172.22.0.101
+      - name: internalapi
+        subnetName: subnet1
+        fixedIP: 172.17.0.101
+      - name: storage
+        subnetName: subnet1
+        fixedIP: 172.18.0.101
+      - name: tenant
+        subnetName: subnet1
+        fixedIP: 172.19.0.101
+      - name: external
+        subnetName: subnet1
+        fixedIP: 172.21.0.101
+      ansible:
+        ansibleHost: 192.168.22.48
+        ansibleUser: dem
+        ansibleVars:
+          fqdn_internal_api: compute02.ocp.lan
 #EOF
